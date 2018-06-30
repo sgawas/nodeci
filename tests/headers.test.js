@@ -12,7 +12,7 @@ beforeEach( async ()=>{
         args: ['--no-sandbox']
     });
     page = await browser.newPage();
-    await page.goto('https://localhost:3000');
+    await page.goto('http://localhost:3000');
 });
 
 afterEach( async()=>{
@@ -54,7 +54,7 @@ test.only('when signed in, show logout button', async ()=>{
 
     await page.setCookie({ name: 'session', value: sessionString});
     await page.setCookie({ name: 'session.sig', value: sig});
-    await page.goto('https://localhost:3000');
+    await page.goto('http://localhost:3000');
     await page.waitFor('a[href="/auth/logout"]');
 
     const text = await page.$eval('a[href="/auth/logout"]', el=>el.innerHTML);
