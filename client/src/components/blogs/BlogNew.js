@@ -4,6 +4,7 @@ import { reduxForm } from 'redux-form';
 import BlogForm from './BlogForm';
 import BlogFormReview from './BlogFormReview';
 
+/*eslint no-undef: "warn"*/
 class BlogNew extends Component {
   state = { showFormReview: false };
 
