@@ -7,7 +7,7 @@
 /coverage
 
 # development
-/config/dev.js
+/config
 
 # production
 /build
